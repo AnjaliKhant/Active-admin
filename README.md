@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Introduction
 
-Things you may want to cover:
+Active Admin is a Ruby on Rails plugin for generating administration style interfaces.
 
-* Ruby version
+## Installation
+Add this in your gemfile
 
-* System dependencies
+```
+gem 'activeadmin' 
+gem 'inherited_resources' , github: 'activeadmin/inherited_resources'
+gem 'devise'
+```
 
-* Configuration
+## Create models
 
-* Database creation
+```
+rails g scaffold User
+rails g scaffold Post User:reference
+```
 
-* Database initialization
+```
+rake db:seed
+rake db:migrate
+```
 
-* How to run the test suite
+## Access
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+/admin/login
+```
 
-* Deployment instructions
-
-* ...
